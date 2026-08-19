@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering Flexbox & Layout Systems — Princess Essiam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="reading-progress"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-symbol">P</div>
+                <div>
+                    <span class="brand-title">Princess Essiam</span>
+                    <span class="brand-subtitle">Engineering & Notes</span>
+                </div>
+            </a>
+            <nav>
+                <a href="index.html" class="nav-cta">&larr; All Essays</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="post-container">
+        <a href="index.html" class="back-link">&larr; Back to Essays</a>
+        
+        <header class="post-header">
+            <h1 class="post-title">Mastering Flexbox & Layout Systems</h1>
+            <div class="post-meta">
+                <span>By Princess Essiam</span>
+                <span>&bull;</span>
+                <span>January 12, 2026</span>
+                <span>&bull;</span>
+                <span>5 min read</span>
+                <span>&bull;</span>
+                <span class="tag-pill">CSS & Design</span>
+            </div>
+        </header>
+
+        <article>
+            <p>CSS Flexible Box Layout (Flexbox) provides an efficient, one-dimensional layout model for distributing space and aligning items within a container, even when their sizes are dynamic.</p>
+
+            <div class="quote-box">
+                "Flexbox simplifies vertical and horizontal centering, space distribution, and content reordering without relying on floats or complex position hacks."
+            </div>
+
+            <h2>Interactive Flexbox Playground</h2>
+            <p>Select container properties below to observe how flexbox items reposition dynamically in real time:</p>
+
+            <!-- INTERACTIVE FLEX PLAYGROUND -->
+            <div class="flex-demo-container">
+                <div class="flex-controls">
+                    <div class="control-item">
+                        <label for="flex-dir">flex-direction</label>
+                        <select id="flex-dir">
+                            <option value="row">row</option>
+                            <option value="column">column</option>
+                            <option value="row-reverse">row-reverse</option>
+                        </select>
+                    </div>
+                    <div class="control-item">
+                        <label for="justify-content">justify-content</label>
+                        <select id="justify-content">
+                            <option value="flex-start">flex-start</option>
+                            <option value="center">center</option>
+                            <option value="space-between">space-between</option>
+                            <option value="space-around">space-around</option>
+                        </select>
+                    </div>
+                    <div class="control-item">
+                        <label for="align-items">align-items</label>
+                        <select id="align-items">
+                            <option value="stretch">stretch</option>
+                            <option value="center" selected>center</option>
+                            <option value="flex-start">flex-start</option>
+                            <option value="flex-end">flex-end</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="flex-demo-box">
+                    <div class="demo-item">1</div>
+                    <div class="demo-item">2</div>
+                    <div class="demo-item">3</div>
+                </div>
+            </div>
+
+            <h2>Core Container Properties</h2>
+            <p>Below is a standard flex container declaration establishing alignment and gap spacing:</p>
+
+<pre><code>.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}</code></pre>
+
+            <h2>Mobile Responsiveness</h2>
+            <p>Combining <code>flex-wrap: wrap;</code> with gap properties ensures cards wrap onto multi-line rows gracefully across mobile screens.</p>
+        </article>
+
+        <div class="interaction-bar">
+            <button class="like-btn" id="like-btn">
+                <span>❤️</span> Like Essay (<span id="like-count">104</span>)
+            </button>
+            <a href="index.html" class="read-link">&larr; Return to main page</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Princess N. Essiam &bull; Designed for simple, humanistic reading.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
